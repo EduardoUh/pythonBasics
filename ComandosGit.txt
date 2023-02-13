@@ -1,0 +1,16 @@
+git init
+git add .
+git commit -m "comentario o nombre del commit"
+git remote add origin https://github.com/EduardoUh/pythonBasics.git (url del repositorio)
+	git branch -M main (renombrar de Master a main)
+	git push -u origin main (aciendo el push de los archivos)
+git checkout -b nombreDeLaNuevaRama main
+git add .
+git commit -m "añadiendo a la nueva rama"
+git push -u origin nombreDeLaNuevaRama o se puede usar el git push (no estoy muy seguro)
+
+Otros comandos útiles:
+git reset: sirve para revertir el git add .
+git checkout -- .: sirve para reconstruir todos los archivos a como se encontraban en el último commit
+git log: sirve para ver todos los commit hechos
+git branch -d nombreDeLaNuevaRama
