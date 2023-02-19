@@ -7,10 +7,69 @@ git remote add origin https://github.com/EduardoUh/pythonBasics.git (url del rep
 git checkout -b nombreDeLaNuevaRama main
 git add .
 git commit -m "añadiendo a la nueva rama"
-git push -u origin nombreDeLaNuevaRama o se puede usar el git push (no estoy muy seguro)
+git push -u origin nombreDeLaNuevaRama
 
 Otros comandos útiles:
 git reset: sirve para revertir el git add .
 git checkout -- .: sirve para reconstruir todos los archivos a como se encontraban en el último commit
 git log: sirve para ver todos los commit hechos
-git branch -d nombreDeLaNuevaRama
+git branch -d nombreDeLaNuevaRama: sirve para eliminar una rama
+git restore --staged holaMundoBitbucket/main.py: sirve para bajar archivos del "stage" o escenario
+git remote -v: sirve para revisar todas las conecciones del respositorio local con repos remotos
+git remote add nombre url: sirve para agregar un repo remoto al repo local
+git remote remove nombre: sirve para remover un repo remoto del repo local
+git stash : sirve para cuando queremos hacer pull pero tenemos archivos/código que no hemos
+subido al escenario "git add ." o que no hemos hecho commit. Lo que hace es encapsular esos
+archivos/código.
+git stash list: sirve para ver todos los stash guardados.
+git stash pop: sirve para sacar el último stash guardado.
+
+Pull:
+git pull --rebase origin main: sirve para descargar el contenido del repositorio remoto
+
+				         **Git flow**
+git init
+git status
+
+git remote -v
+git remote add {nombreDelWorkspace} {urlDelOrigen/MiRepoPersonal}
+git remote add upstream urlDelRepoDeLaEmpresa
+
+git branch {nombreDeLaRama}
+git checkout {nombreDeLaRama}
+
+git flow init
+
+git stash
+git stash pop
+
+git add .
+git commit -m "feat(TAREA-01): el comentario"
+
+git pull {nombreDelWorkspace} {nombreDeLaRama}
+git push {nombreDelWorkspace} {nombreDeLaRama}
+
+git config --global user.name "usuario-dev"
+git config --global user.email "emailDelDev@gmail.com"
+git flow feature start CreatingHelloWorldApp
+git flow feature finish CreatingHelloWorldApp
+
+		**Notación (prefijos) para comentarios de acuerdo a Git-flow**
+
+feat(tag de la tarea): Una nueva característica
+
+fix(tag de la tarea): Una corrección de error
+
+docs: Cambios en la documentación o en los comentarios(notar que el tipo es en plural 'docs')
+
+style: Cambios que no afectan el significado del código (espacios en blanco,  formateo, faltó un punto y coma, etc)
+
+refactor: Un cambio en el código que no corrige un error, ni agrega una  característica
+
+test: Agregando pruebas que falten(porque agregar nuevos test son considerados feat)
+
+perf: Cambio de código que mejora el rendimiento
+
+revert: rollback del commit 5050sad_istic
+
+chore: Cambios en el proceso de construcción(compilación) o herramientas auxiliares y/o bibliotecas como generadores de documentación
