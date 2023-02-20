@@ -39,3 +39,14 @@ Second car:
     Model: {chevy.model}
     Type: {chevy.type}
 ''')
+
+# Las importaciones siempre deben ir en lo más alto del documento, no como ahora
+from Employee import Employee
+from Client import  Client
+
+
+new_employee = Employee('Julius', 'Mccafy', '45646', 'juliusmccfy@gmail.com', 250.35)
+new_client = Client('Eduardo', 'Uh', '48896', 'eduardoivan@gmail.com', 'VIP')
+
+print(new_employee)
+print(new_client)
